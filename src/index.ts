@@ -1,1 +1,1 @@
-console.log("My New House in New York");
+console.log("My New House in West Germany");
