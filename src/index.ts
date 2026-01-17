@@ -73,5 +73,13 @@ const subtractTwoNumbers = (a: number, b: number): number => {
   return a - b;
 };
 
+//type inference with functions
 addTwoNumbers(3, 9);
 subtractTwoNumbers(10, 7);
+
+function addAllNumbers(items: number[]): void {
+  const total = items.reduce((a, c) => a + c, 0);
+  console.log(total);
+}
+
+addAllNumbers([5, 7, 9, 11]);
