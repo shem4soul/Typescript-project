@@ -63,3 +63,15 @@ person.name = "shem";
 person.score = 67;
 
 const score = person.score;
+
+//functions
+function addTwoNumbers(a: number, b: number): number {
+  return a + b;
+}
+
+const subtractTwoNumbers = (a: number, b: number): number => {
+  return a - b;
+};
+
+addTwoNumbers(3, 9);
+subtractTwoNumbers(10, 7);
