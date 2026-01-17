@@ -63,4 +63,18 @@ function formatGreeting(name, greeting) {
     return `${greeting}, ${name}`;
 }
 const result = formatGreeting("mario", "hello");
+// any
+let age1;
+age = 25;
+age1 = false;
+//any type in arrays
+let things1 = ["hello", true, 30, null];
+things1.push({ id: 123 });
+function addTogether(value) {
+    return value + value;
+}
+const resultOne = addTogether("hello");
+const resultTwo = addTogether(3);
+// Any is useful when migrating from javaScript to Typescript
+//Beacuse using any wont cause errors initially
 //# sourceMappingURL=index.js.map

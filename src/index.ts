@@ -91,3 +91,24 @@ function formatGreeting(name: string, greeting: string): string {
 }
 
 const result = formatGreeting("mario", "hello");
+
+// any
+let age1: any;
+age = 25;
+
+age1 = false;
+
+//any type in arrays
+let things1: any[] = ["hello", true, 30, null];
+
+things1.push({ id: 123 });
+
+function addTogether(value: any): any {
+  return value + value;
+}
+
+const resultOne = addTogether("hello");
+const resultTwo = addTogether(3);
+
+// Any is useful when migrating from javaScript to Typescript
+//Beacuse using any wont cause errors initially
