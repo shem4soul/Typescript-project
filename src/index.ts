@@ -83,3 +83,11 @@ function addAllNumbers(items: number[]): void {
 }
 
 addAllNumbers([5, 7, 9, 11]);
+
+//return type inference
+
+function formatGreeting(name: string, greeting: string): string {
+  return `${greeting}, ${name}`;
+}
+
+const result = formatGreeting("mario", "hello");
