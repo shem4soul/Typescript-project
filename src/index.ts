@@ -112,3 +112,15 @@ const resultTwo = addTogether(3);
 
 // Any is useful when migrating from javaScript to Typescript
 //Beacuse using any wont cause errors initially
+
+// tuples
+let person1: [string, number, boolean] = ["mario", 66, true];
+
+//tuples Examples
+
+let hsla: [number, string, string, number];
+hsla = [200, "100%", "50%", 0.5];
+
+let xy: [number, number];
+
+xy = [94.7, 20.1];
