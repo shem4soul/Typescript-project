@@ -124,3 +124,24 @@ hsla = [200, "100%", "50%", 0.5];
 let xy: [number, number];
 
 xy = [94.7, 20.1];
+
+function useCoords(): [number, number] {
+  // get coords
+
+  const lat = 100;
+  const long = 77;
+
+  return [lat, long];
+}
+
+const [lat, long] = useCoords();
+
+//---------
+//named tuples
+//----------
+
+let user2: [name: string, age: number];
+
+user2 = ["peach", 25];
+
+console.log(user2[0]);
