@@ -145,3 +145,28 @@ let user2: [name: string, age: number];
 user2 = ["peach", 25];
 
 console.log(user2[0]);
+
+//interfaces
+
+interface Author {
+  name: string;
+  avatar: string;
+}
+
+const authorOne: Author = { name: "mario", avatar: "/img/mario.png" };
+
+interface Post {
+  title: string;
+  body: string;
+  tags: string[];
+  create_at: Date;
+  author: Author;
+}
+
+const newPost: Post = {
+  title: "My first post",
+  body: "This is the content of my first post",
+  tags: ["welcome", "firstpost"],
+  create_at: new Date(),
+  author: authorOne,
+};
