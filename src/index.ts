@@ -178,3 +178,9 @@ function createPost(post: Post): void {
 }
 
 createPost(newPost);
+
+//with arrays
+
+let posts: Post[] = [];
+
+posts.push(newPost);
