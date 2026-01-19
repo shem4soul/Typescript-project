@@ -170,3 +170,11 @@ const newPost: Post = {
   create_at: new Date(),
   author: authorOne,
 };
+
+// as function argument types
+
+function createPost(post: Post): void {
+  console.log(`Created post ${post.title} by ${post.author.name}`);
+}
+
+createPost(newPost);
