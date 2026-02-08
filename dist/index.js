@@ -10,5 +10,10 @@ function getRandomColor() {
 const colorOne = getRandomColor();
 const colorTwo = getRandomColor();
 console.log(colorOne, colorTwo);
-//
+const userOne = { name: "mario", score: 35 };
+function formatUser(user) {
+    console.log(` ${user.name} logged in with score ${user.score}`);
+}
+formatUser(userOne);
+formatUser({ name: "luigi", score: 42 });
 //# sourceMappingURL=index.js.map

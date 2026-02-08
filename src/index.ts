@@ -203,4 +203,17 @@ const colorOne = getRandomColor();
 const colorTwo = getRandomColor();
 console.log(colorOne, colorTwo);
 
-//
+//Example 2 - object literal
+type User = {
+  name: string;
+  score: number;
+};
+
+const userOne: User = { name: "mario", score: 35 };
+
+function formatUser(user: User): void {
+  console.log(` ${user.name} logged in with score ${user.score}`);
+}
+
+formatUser(userOne);
+formatUser({ name: "luigi", score: 42 });
