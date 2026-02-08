@@ -10,4 +10,5 @@ function getRandomColor() {
 const colorOne = getRandomColor();
 const colorTwo = getRandomColor();
 console.log(colorOne, colorTwo);
+//
 //# sourceMappingURL=index.js.map
