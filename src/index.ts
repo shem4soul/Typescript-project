@@ -217,3 +217,22 @@ function formatUser(user: User): void {
 
 formatUser(userOne);
 formatUser({ name: "luigi", score: 42 });
+
+//union types
+
+let someId: number | string;
+
+someId = 1;
+someId = "abc123";
+
+let email: string | null = null;
+
+email = "shem4soul@gmail.com";
+email = null;
+
+type Id = number | string;
+
+let anotherId: Id;
+
+anotherId = 123;
+anotherId = "abc123";

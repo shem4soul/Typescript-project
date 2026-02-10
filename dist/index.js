@@ -16,4 +16,14 @@ function formatUser(user) {
 }
 formatUser(userOne);
 formatUser({ name: "luigi", score: 42 });
+//union types
+let someId;
+someId = 1;
+someId = "abc123";
+let email = null;
+email = "shem4soul@gmail.com";
+email = null;
+let anotherId;
+anotherId = 123;
+anotherId = "abc123";
 //# sourceMappingURL=index.js.map
