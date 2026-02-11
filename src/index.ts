@@ -204,19 +204,19 @@ const colorTwo = getRandomColor();
 console.log(colorOne, colorTwo);
 
 //Example 2 - object literal
-type User = {
-  name: string;
-  score: number;
-};
+// type User = {
+//   name: string;
+//   score: number;
+// };
 
-const userOne: User = { name: "mario", score: 35 };
+// const userOne: User = { name: "mario", score: 35 };
 
-function formatUser(user: User): void {
-  console.log(` ${user.name} logged in with score ${user.score}`);
-}
+// function formatUser(user: User): void {
+//   console.log(` ${user.name} logged in with score ${user.score}`);
+// }
 
-formatUser(userOne);
-formatUser({ name: "luigi", score: 42 });
+// formatUser(userOne);
+// formatUser({ name: "luigi", score: 42 });
 
 //union types
 
@@ -258,3 +258,62 @@ const idOne = swapIdType(1);
 const idTwo = swapIdType("2");
 
 console.log(idOne, idTwo);
+
+//tagged interfaces
+
+interface User {
+  type: "user";
+  username: string;
+  email: string;
+  id: Id;
+}
+
+interface Person {
+  type: "person";
+  firstname: string;
+  age: number;
+  id: Id;
+}
+
+function logDetails(value: User | Person): void {
+  if (value.type === "user") {
+    console.log(value.email, value.username);
+  }
+  if (value.type === "person") {
+    console.log(value.firstname, value.age);
+  }
+}
+
+//reusable interfaces
+
+interface hasQuantity {
+  quantity: number;
+}
+
+const something: hasQuantity = {
+  quantity: 42,
+};
+
+function printQuantity(item: hasQuantity): void {
+  console.log(`The quantity is ${item.quantity}`);
+}
+
+const fruit = {
+  name: "apple",
+  quantity: 10,
+};
+
+const vehicle = {
+  make: "Toyota",
+  model: "Camry",
+  quantity: 5,
+};
+
+const person = {
+  name: "mario",
+  age: 35,
+};
+
+printQuantity(fruit);
+printQuantity(vehicle);
+// printQuantity(person); //error because person does not have quantity property

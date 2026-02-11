@@ -10,12 +10,17 @@ function getRandomColor() {
 const colorOne = getRandomColor();
 const colorTwo = getRandomColor();
 console.log(colorOne, colorTwo);
-const userOne = { name: "mario", score: 35 };
-function formatUser(user) {
-    console.log(` ${user.name} logged in with score ${user.score}`);
-}
-formatUser(userOne);
-formatUser({ name: "luigi", score: 42 });
+//Example 2 - object literal
+// type User = {
+//   name: string;
+//   score: number;
+// };
+// const userOne: User = { name: "mario", score: 35 };
+// function formatUser(user: User): void {
+//   console.log(` ${user.name} logged in with score ${user.score}`);
+// }
+// formatUser(userOne);
+// formatUser({ name: "luigi", score: 42 });
 //union types
 let someId;
 someId = 1;
@@ -44,4 +49,12 @@ function swapIdType(id) {
 const idOne = swapIdType(1);
 const idTwo = swapIdType("2");
 console.log(idOne, idTwo);
+function logDetails(value) {
+    if (value.type === "user") {
+        console.log(value.email, value.username);
+    }
+    if (value.type === "person") {
+        console.log(value.firstname, value.age);
+    }
+}
 //# sourceMappingURL=index.js.map
